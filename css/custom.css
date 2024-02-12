@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.wrapper {
+    /* padding: 60px 120px; */
+    background-color: #fff;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   background-color: #fff;
+     padding: 60px 120px;
+   
+}
+.nav_right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+}
+.nav_right ul li a{
+    text-decoration: none;
+    color: hsl(233, 8%, 79%);
+}
+
+.nav_right ul li a:hover{
+    color:  hsl(240, 100%, 5%);
+}
+.menu_icon {
+    display: none;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+
+/**HEADER**/
+
+
+.header {
+    padding: 130px 120px;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    /* display: flex; */
+    gap: 32px;
+}
+.banner_containter {
+    width: 100%;  
+    height: 220px; 
+}
+.banner_containter img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_right {
+    background-color: hsl(240, 100%, 5%);
+    padding: 22px 16px;
+    height: fit-content;
+}
+.header_right h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 32px;
+    font-weight: 500;
+}
+.cta {
+    display: flex;
+    gap: 64px;
+    padding: 16px 0 0 ;
+}
+.cta_header {
+    flex: 1;
+}
+.cta_header  h1 {
+    font-size: 70px;
+    line-height: 64px;
+    color: hsl(240, 100%, 5%);
+}
+.cta_content {
+    flex: 1;
+}
+
+.cta_content p {
+    font-size: 18px;
+    line-height: 32px;
+    color: hsl(240, 100%, 5%);
+    font-weight: 300;
+    margin-bottom: 48px;
+}
+.cta_content  a {
+    background-color: hsl(5, 85%, 63%);
+    padding: 12px 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(36, 100%, 99%);
+    text-decoration: none;
+}
+.cta_content  a:hover{
+    background-color: hsl(5, 91%, 70%);
+}
+.hec {
+    border-bottom: 1px solid  hsl(236, 13%, 42%);
+    padding: 16px 0 ;
+}
+.hec h3 {
+    font-size: 18px ;
+    color: hsl(36, 100%, 99%);
+    margin-top: 16px;
+}
+.hec p {
+    color: hsl(233, 8%, 79%);
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/***POST SECTION STYLE ***/
+
+.post {
+    padding: 0 120px 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+   
+}
+.post_one {
+    display: flex;
+    gap:24px;
+    height: 100%;
+}
+.post_one .left {
+    background-color: aqua;
+    width: 30%;
+    height: 125px;
+    
+}
+.post_one .left  img{
+    width: 100%;
+    height: 100%;
+    
+}
+.post_one .right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 70%;
+    
+}
+.post_one .right h3{
+        font-size: 32px;
+        color:  hsl(233, 8%, 79%);
+}
+.post_one .right h5{
+        font-size: 15px;
+      
+}
+.post_one .right p{
+        
+        color:  hsl(233, 8%, 79%);
+}
+/* Media query */
+
+@media only screen and (max-width:764px){
+    nav {
+        padding: 40px 32px;
+
+    }
+
+    .nav_right {
+        display: none;
+    }
+    
+ 
+    .menu_icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile_nav {
+        display: block;
+    }
+
+
+    .nav_right.mobile{
+        display: flex;
+        position: absolute;
+        top: 80.5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        background-color: #fff;
+        padding: 16px;
+        transition:ease-in-out .3s;
+    }
+
+    .nav_right.mobile ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+       align-items: center;
+   
+
+    }
+    .header {
+        grid-template-columns: 1fr;
+        padding: 130px 32px;
+    }
+    .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0 0 ;
+
+    }
+    .cta_header h1{
+        line-height: 100px;
+    }
+    .header_right {
+        margin-top: 120px;
+    }
+    .post {
+        padding: 0 32px 120px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+       
+    }
+
+}
